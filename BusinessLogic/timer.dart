@@ -32,8 +32,8 @@ class _TimerClassState extends State<TimerClass> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 56,
-      height: 56,
+      width: 60,
+      height: 60,
       child: Center(
           child: AnimatedBuilder(
               builder: (BuildContext context, Widget child) {
@@ -51,6 +51,7 @@ class _TimerClassState extends State<TimerClass> with TickerProviderStateMixin {
 
   void startAnimation() {
     startAnimating = true;
+    
   }
 }
 

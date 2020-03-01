@@ -16,7 +16,7 @@ class _FirstScratchCardState extends State<FirstScratchCard> {
     return Stack(
       children: <Widget>[
         Positioned(
-          top: 100,
+          top: 110,
           left: 45,
           right: 45,
           child: Container(
@@ -36,13 +36,13 @@ class _FirstScratchCardState extends State<FirstScratchCard> {
 
 //Circles on the screen
 
-        Positioned(top: 150, left: 45, child: IconContainer()),
-        Positioned(top: 150, right: 45, child: IconContainer()),
-        Positioned(top: 250, left: 45, child: IconContainer()),
-        Positioned(top: 250, right: 45, child: IconContainer()),
-        Positioned(top: 350, left: 45, child: IconContainer()),
+        Positioned(top: 175, left: 45, child: IconContainer()),
+        Positioned(top: 175, right: 45, child: IconContainer()),
+        Positioned(top: 275, left: 45, child: IconContainer()),
+        Positioned(top: 275, right: 45, child: IconContainer()),
+        Positioned(top: 375, left: 45, child: IconContainer()),
         Positioned(
-          top: 350,
+          top: 375,
           right: 45,
           child: IconContainer(),
         ),

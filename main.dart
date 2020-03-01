@@ -9,12 +9,9 @@ class MyApp extends StatefulWidget {
   MyAppState createState() => MyAppState();
 }
 
-class MyAppState extends State<MyApp> with TickerProviderStateMixin{
-  
+class MyAppState extends State<MyApp> with TickerProviderStateMixin {
   final color = Color(0xff2A47BC);
   final int coinsCount = 1500;
-
- 
 
   @override
   Widget build(BuildContext context) {
@@ -25,24 +22,27 @@ class MyAppState extends State<MyApp> with TickerProviderStateMixin{
       home: Scaffold(
 //Search Icon on the bottom
 
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.white,
-          child: Icon(
-            Icons.search,
-            color: color,
-            size: 30.0,
-          ),
-          onPressed: () {},
-        ),
         backgroundColor: color,
         body: Stack(children: <Widget>[
+          Positioned(
+            width: 40,
+            left: 20,
+            top: 35,
+            child: FloatingActionButton(
+              child: Icon(
+                Icons.reorder,
+                color: color,
+              ),
+              backgroundColor: Colors.white,
+              onPressed: () {},
+            ),
+          ),
 //Timer on the top of the screen
 
           Container(
             child: TimerClass(),
             alignment: Alignment.topCenter,
-            margin: EdgeInsets.all(25.0),
+            margin: EdgeInsets.all(50.0),
           ),
 
 //Top right coins count
@@ -77,25 +77,6 @@ class MyAppState extends State<MyApp> with TickerProviderStateMixin{
 
           Positioned(child: ListViewClass())
         ]),
-        bottomNavigationBar: BottomAppBar(
-          shape: CircularNotchedRectangle(),
-          notchMargin: 4.0,
-          child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              mainAxisSize: MainAxisSize.max,
-              children: <Widget>[
-//Two icons on the bottom of the main screen
-
-                IconButtonClass(icon: Icon(Icons.menu), onPressed: () {}),
-                IconButtonClass(
-                  icon: Icon(
-                    Icons.settings,
-                    color: color,
-                  ),
-                  onPressed: () {},
-                )
-              ]),
-        ),
       ),
     );
   }

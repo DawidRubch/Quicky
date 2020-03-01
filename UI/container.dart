@@ -19,7 +19,7 @@ class ContainerClass extends StatelessWidget {
   ContainerClass({Key key, this.name, this.containerPrice, this.inside})
       : super(key: key);
   final margin =
-      EdgeInsets.only(top: 100.0, bottom: 40.0, left: 20.0, right: 20.0);
+      EdgeInsets.only(top: 125.0, bottom: 40.0, left: 20.0, right: 20.0);
 
   final color = Color(0xff2A47BC);
 
