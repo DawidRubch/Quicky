@@ -16,69 +16,71 @@ class MyAppState extends State<MyApp> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      color: color,
-      title: "Quickie",
-      home: Scaffold(
+        debugShowCheckedModeBanner: false,
+        color: color,
+        title: "Quickie",
+        home: Scaffold(
 //Search Icon on the bottom
 
-        backgroundColor: color,
-        body: Stack(children: <Widget>[
-          Positioned(
-            width: 40,
-            left: 20,
-            top: 35,
-            child: FloatingActionButton(
-              child: Icon(
-                Icons.reorder,
-                color: color,
+          backgroundColor: color,
+          body: Container(
+            child: Stack(children: <Widget>[
+              Positioned(
+                width: 40,
+                left: 20,
+                top: 35,
+                child:FloatingActionButton(
+                  child: Icon(
+                    Icons.reorder,
+                    color: color,
+                  ),
+                  backgroundColor: Colors.white,
+                  onPressed: () {},
+                ),
               ),
-              backgroundColor: Colors.white,
-              onPressed: () {},
-            ),
-          ),
 //Timer on the top of the screen
 
-          Container(
-            child: TimerClass(),
-            alignment: Alignment.topCenter,
-            margin: EdgeInsets.all(50.0),
-          ),
+              Container(
+                child: TimerClass(),
+                alignment: Alignment.topCenter,
+                margin: EdgeInsets.all(50.0),
+              ),
 
 //Top right coins count
 
-          Positioned(
-            right: 40,
-            top: 30,
-            child: Text('${coinsCount}C',
-                style: TextStyle(color: Colors.white, fontSize: 15.0)),
-          ),
+              Positioned(
+                right: 40,
+                top: 30,
+                child: Text('${coinsCount}C',
+                    style: TextStyle(color: Colors.white, fontSize: 15.0)),
+              ),
 
 //Buy more button
 
-          Positioned(
-            width: 100,
-            height: 30.0,
-            right: 12,
-            top: 50.0,
-            child: FloatingActionButton.extended(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(25.0)),
-              label: Text(
-                'BUY MORE',
-                style: TextStyle(color: color, fontSize: 13.0),
-              ),
-              onPressed: () {},
-              backgroundColor: Colors.white,
-            ),
-          ),
+              Positioned(
+                  width: 100,
+                  height: 30.0,
+                  right: 12,
+                  top: 50.0,
+                  child: Center(
+                    child: FloatingActionButton.extended(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25.0)),
+                      label: Text(
+                        'BUY MORE',
+                        style: TextStyle(color: color, fontSize: 13.0),
+                      ),
+                      onPressed: () {},
+                      backgroundColor: Colors.white,
+                    ),
+                  )),
 
 //Main PageView
 
-          Positioned(child: ListViewClass())
-        ]),
-      ),
-    );
+              Positioned(child: ListViewClass())
+            ]),
+          ),
+        ));
   }
 }
 
