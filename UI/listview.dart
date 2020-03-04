@@ -19,7 +19,7 @@ class _ListViewClassState extends State<ListViewClass> {
   Widget build(BuildContext context) {
     return PageView(
       scrollDirection: Axis.horizontal,
-      controller: controller,
+      
       children: <Widget>[
 //First Scratchcard
 

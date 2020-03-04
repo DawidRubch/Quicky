@@ -78,10 +78,10 @@ class MyAppState extends State<MyApp> with TickerProviderStateMixin {
 //Main PageView
 
               Positioned(
-                  top: 20,
-                  left: 20,
-                  right: 20,
-                  bottom: 20,
+                  top: 125,
+                  left: 30,
+                  right: 30,
+                  bottom: 40,
                   child: ListViewClass())
             ]),
           ),
