@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'UI/listview.dart';
 import 'BusinessLogic/timer.dart';
+import 'UI/sidebar.dart';
 
 void main() => runApp(MyApp());
 
@@ -19,7 +20,7 @@ class MyAppState extends State<MyApp> with TickerProviderStateMixin {
         debugShowCheckedModeBanner: false,
         color: color,
         title: "Quickie",
-        home: Scaffold(
+        home: Scaffold(drawer: NavDrawer(),
 //Search Icon on the bottom
 
           backgroundColor: color,
