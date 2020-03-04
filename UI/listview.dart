@@ -21,14 +21,11 @@ class _ListViewClassState extends State<ListViewClass> {
       scrollDirection: Axis.horizontal,
       controller: controller,
       children: <Widget>[
-
 //First Scratchcard
 
         ContainerClass(
-            name: 'Telefon',
-            containerPrice: 200,
-            inside: FirstScratchCard()),
-        
+            name: 'Telefon', containerPrice: 200, inside: FirstScratchCard()),
+
 //Second Scratchcard
 
         ContainerClass(
@@ -48,4 +45,3 @@ class _ListViewClassState extends State<ListViewClass> {
     );
   }
 }
-

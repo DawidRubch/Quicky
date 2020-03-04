@@ -29,7 +29,7 @@ class MyAppState extends State<MyApp> with TickerProviderStateMixin {
                 width: 40,
                 left: 20,
                 top: 35,
-                child:FloatingActionButton(
+                child: FloatingActionButton(
                   child: Icon(
                     Icons.reorder,
                     color: color,
@@ -77,7 +77,12 @@ class MyAppState extends State<MyApp> with TickerProviderStateMixin {
 
 //Main PageView
 
-              Positioned(child: ListViewClass())
+              Positioned(
+                  top: 20,
+                  left: 20,
+                  right: 20,
+                  bottom: 20,
+                  child: ListViewClass())
             ]),
           ),
         ));
