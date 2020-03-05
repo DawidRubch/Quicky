@@ -17,31 +17,35 @@ class _ListViewClassState extends State<ListViewClass> {
 
   @override
   Widget build(BuildContext context) {
-    return PageView(
-      scrollDirection: Axis.horizontal,
-      
-      children: <Widget>[
+    return Container(
+        
+        child: PageView(
+          scrollDirection: Axis.horizontal,
+          controller: controller,
+          children: <Widget>[
 //First Scratchcard
 
-        ContainerClass(
-            name: 'Telefon', containerPrice: 200, inside: FirstScratchCard()),
+            ContainerClass(
+                name: 'Telefon',
+                containerPrice: 200,
+                inside: FirstScratchCard()),
 
 //Second Scratchcard
 
-        ContainerClass(
-          name: 'W',
-          containerPrice: 150,
-          inside: Text('Gitara'),
-        ),
+            ContainerClass(
+              name: 'W',
+              containerPrice: 150,
+              inside: Text('Gitara'),
+            ),
 
 //Third Scratchcard
 
-        ContainerClass(
-          name: 'Komputerze',
-          containerPrice: 250,
-          inside: Text('Żeby error'),
-        )
-      ],
-    );
+            ContainerClass(
+              name: 'Komputerze',
+              containerPrice: 250,
+              inside: Text('Żeby error'),
+            )
+          ],
+        ));
   }
 }

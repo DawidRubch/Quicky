@@ -18,14 +18,14 @@ class ContainerClass extends StatelessWidget {
 
   ContainerClass({Key key, this.name, this.containerPrice, this.inside})
       : super(key: key);
-  final margin = EdgeInsets.only(left: 20.0, right: 20.0);
+  final margin = EdgeInsets.only(left: 20, right: 20,bottom: 40,top: 130);
 
   final color = Color(0xff2A47BC);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: margin,
+       margin: margin,
         child: Stack(children: <Widget>[
 //Info icon
 

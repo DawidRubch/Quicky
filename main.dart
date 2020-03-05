@@ -20,7 +20,8 @@ class MyAppState extends State<MyApp> with TickerProviderStateMixin {
         debugShowCheckedModeBanner: false,
         color: color,
         title: "Quickie",
-        home: Scaffold(drawer: NavDrawer(),
+        home: Scaffold(
+          drawer: NavDrawer(),
 //Search Icon on the bottom
 
           backgroundColor: color,
@@ -44,7 +45,7 @@ class MyAppState extends State<MyApp> with TickerProviderStateMixin {
               Container(
                 child: TimerClass(),
                 alignment: Alignment.topCenter,
-                margin: EdgeInsets.all(50.0),
+                margin: EdgeInsets.only(top: 60),
               ),
 
 //Top right coins count
@@ -78,12 +79,7 @@ class MyAppState extends State<MyApp> with TickerProviderStateMixin {
 
 //Main PageView
 
-              Positioned(
-                  top: 125,
-                  left: 30,
-                  right: 30,
-                  bottom: 40,
-                  child: ListViewClass())
+              Positioned(child: ListViewClass())
             ]),
           ),
         ));
