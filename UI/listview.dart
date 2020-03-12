@@ -26,7 +26,7 @@ class _ListViewClassState extends State<ListViewClass> {
 //First Scratchcard
 
             ContainerClass(
-                name: 'Telefon',
+                name: 'Quicky',
                 containerPrice: 200,
                 inside: FirstScratchCard()),
 
@@ -35,7 +35,7 @@ class _ListViewClassState extends State<ListViewClass> {
             ContainerClass(
               name: 'W',
               containerPrice: 150,
-              inside: Text('Gitara'),
+              inside: Text('                                   Gitara'),
             ),
 
 //Third Scratchcard

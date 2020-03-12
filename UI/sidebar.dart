@@ -1,47 +1,39 @@
 import 'package:flutter/material.dart';
 
-
 class NavDrawer extends StatelessWidget {
+  final color = Color(0xff2A47BC);
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: ListView(
-        padding: EdgeInsets.zero,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          DrawerHeader(
-            child: Text(
-              'Side menu',
-              style: TextStyle(color: Colors.white, fontSize: 25),
-            ),
-            decoration: BoxDecoration(
-                color: Colors.white,
-                image: DecorationImage(
-                    fit: BoxFit.fill,
-                    image: AssetImage('assets/images/cover.jpg'))),
-          ),
           ListTile(
-            leading: Icon(Icons.input),
-            title: Text('Welcome'),
+            leading: Icon(
+              Icons.favorite,
+              color: color,
+            ),
+            title: Text(
+              'Rate us',
+              style: TextStyle(color: color),
+            ),
             onTap: () => {},
           ),
           ListTile(
-            leading: Icon(Icons.verified_user),
-            title: Text('Profile'),
+            
+            leading: Icon(Icons.change_history, color: color),
+            title: Text(
+              'Change mode',
+              style: TextStyle(color: color),
+            ),
             onTap: () => Navigator.of(context).pop(),
           ),
           ListTile(
-            leading: Icon(Icons.settings),
-            title: Text('Settings'),
-            onTap: () => Navigator.of(context).pop(),
-          ),
-          ListTile(
-            leading: Icon(Icons.border_color),
-            title: Text('Feedback'),
-            onTap: () => Navigator.of(context).pop(),
-          ),
-          ListTile(
-            leading: Icon(Icons.exit_to_app),
-            title: Text('Logout'),
+            leading: Icon(Icons.chat_bubble, color: color),
+            title: Text(
+              'Support',
+              style: TextStyle(color: color),
+            ),
             onTap: () => Navigator.of(context).pop(),
           ),
         ],
