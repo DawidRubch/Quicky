@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:scratchcard/utils/mediaquery.dart';
+
 class TimerClass extends StatefulWidget {
   @override
   _TimerClassState createState() => _TimerClassState();
@@ -8,7 +9,6 @@ class TimerClass extends StatefulWidget {
 class _TimerClassState extends State<TimerClass> with TickerProviderStateMixin {
   final color = Color(0xff2A47BC);
   AnimationController animationController;
-  
 
 //initState
   @override
@@ -35,7 +35,8 @@ class _TimerClassState extends State<TimerClass> with TickerProviderStateMixin {
           child: AnimatedBuilder(
               builder: (BuildContext context, Widget child) {
                 return Text('$timerString',
-                    style: TextStyle(fontSize: displayWidth(context) * 0.065, color: color));
+                    style: TextStyle(
+                        fontSize: displayWidth(context) * 0.065, color: color));
               },
               animation: animationController)),
 
@@ -46,5 +47,3 @@ class _TimerClassState extends State<TimerClass> with TickerProviderStateMixin {
     );
   }
 }
-
-
