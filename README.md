@@ -1,2 +1,2 @@
 # Quicky
- Quick as a mafa
+ An app that pays you for your reflexes.
