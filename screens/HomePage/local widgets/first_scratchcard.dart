@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
+import 'package:scratchcard/utils/mediaquery.dart';
 
 class FirstScratchCard extends StatefulWidget {
   @override
@@ -13,37 +14,43 @@ class _FirstScratchCardState extends State<FirstScratchCard> {
 //Container with 'LOOK FOR'
 
   Widget build(BuildContext context) {
+    double iconContainerWidthPadding = displayWidth(context) * 0.11;
     return Stack(
       children: <Widget>[
         Positioned(
-          top: 110,
-          left: 45,
-          right: 45,
+          top: displayHeight(context) * 0.18,
+          left: iconContainerWidthPadding,
+          right: iconContainerWidthPadding,
           child: Container(
-            width: 20,
-            height: 40,
+            width: displayWidth(context) * 0.05,
+            height: displayHeight(context) * 0.06,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(18.0),
+              borderRadius: BorderRadius.circular(displayWidth(context) * 0.048),
               color: color,
             ),
             alignment: Alignment.center,
             child: Text(
               'LOOK FOR: ${showNumbers.generateNumber(5)}',
-              style: TextStyle(color: Colors.white, fontSize: 20.0),
+              style: TextStyle(color: Colors.white, fontSize: displayWidth(context) * 0.05),
             ),
           ),
         ),
 
 //Circles on the screen
 
-        Positioned(top: 175, left: 45, child: IconContainer()),
-        Positioned(top: 175, right: 45, child: IconContainer()),
-        Positioned(top: 275, left: 45, child: IconContainer()),
-        Positioned(top: 275, right: 45, child: IconContainer()),
-        Positioned(top: 375, left: 45, child: IconContainer()),
         Positioned(
-          top: 375,
-          right: 45,
+            top: displayHeight(context) * 0.27, left: iconContainerWidthPadding, child: IconContainer()),
+        Positioned(
+            top: displayHeight(context) * 0.27, right: iconContainerWidthPadding , child: IconContainer()),
+        Positioned(
+            top: displayHeight(context) * 0.40, left: iconContainerWidthPadding, child: IconContainer()),
+        Positioned(
+            top: displayHeight(context) * 0.40, right: iconContainerWidthPadding, child: IconContainer()),
+        Positioned(
+            top: displayHeight(context) * 0.53, left: iconContainerWidthPadding, child: IconContainer()),
+        Positioned(
+          top: displayHeight(context) * 0.53,
+          right: iconContainerWidthPadding,
           child: IconContainer(),
         ),
       ],
@@ -72,7 +79,7 @@ class _IconContainerState extends State<IconContainer> {
 //Icon Container UI
 
         decoration: BoxDecoration(
-            shape: BoxShape.circle, border: Border.all(color: color, width: 2)),
+            shape: BoxShape.circle, border: Border.all(color: color, width: displayWidth(context) * 0.005)),
         child: FloatingActionButton(
           backgroundColor: buttonColors,
 
@@ -89,7 +96,7 @@ class _IconContainerState extends State<IconContainer> {
 
           child: Text(
             '${inside == null ? '' : inside}',
-            style: TextStyle(color: color, fontSize: 20.0),
+            style: TextStyle(color: color, fontSize: displayWidth(context) * 0.05),
           ),
         ));
   }
