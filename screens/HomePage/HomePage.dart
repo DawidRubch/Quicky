@@ -5,6 +5,7 @@ import 'package:scratchcard/widgets/sidebar.dart';
 import './local widgets/timer.dart';
 import 'package:scratchcard/utils/mediaquery.dart';
 
+//Main Page
 class HomePage extends StatelessWidget {
   final color = Color(0xff2A47BC);
   @override
@@ -13,13 +14,20 @@ class HomePage extends StatelessWidget {
       floatingActionButton: Container(
         width: displayWidth(context) * 0.17,
         height: displayHeight(context) * 0.10,
-        child: FloatingActionButton(
+        child:
+
+//FloatingActionButton
+
+            FloatingActionButton(
           backgroundColor: Colors.white,
           onPressed: null,
           child: TimerClass(),
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+
+//Bottom AppBar
+
       bottomNavigationBar: BottomAppBar(
         shape: CircularNotchedRectangle(),
         child: Row(
@@ -32,15 +40,17 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      drawer: NavDrawer(),
+      drawer:
+
+//Drawer
+
+          NavDrawer(),
       backgroundColor: color,
-      body: Container(
-        child: Stack(children: <Widget>[
+      body:
+
 //Main PageView
 
-          ListViewClass()
-        ]),
-      ),
+          ListViewClass(),
     );
   }
 }

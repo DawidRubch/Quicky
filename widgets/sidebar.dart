@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:scratchcard/utils/mediaquery.dart';
 
+//Sidebar class
 class NavDrawer extends StatelessWidget {
   final color = Color(0xff2A47BC);
   @override
@@ -12,6 +13,9 @@ class NavDrawer extends StatelessWidget {
             children: <Widget>[
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
+
+//SideBar children
+
                 children: <Widget>[
                   ListTile(
                     leading: Icon(

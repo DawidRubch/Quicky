@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:scratchcard/utils/mediaquery.dart';
 
+//Timer on the bottom of the screen
 class TimerClass extends StatefulWidget {
   @override
   _TimerClassState createState() => _TimerClassState();
@@ -19,6 +20,7 @@ class _TimerClassState extends State<TimerClass> with TickerProviderStateMixin {
   }
 
 //Timer String
+
   String get timerString {
     Duration duration =
         animationController.duration * animationController.value;
@@ -40,7 +42,8 @@ class _TimerClassState extends State<TimerClass> with TickerProviderStateMixin {
               },
               animation: animationController)),
 
-//Timer LOOKS
+//Timer decoration
+
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(displayWidth(context) * 0.1),
       ),

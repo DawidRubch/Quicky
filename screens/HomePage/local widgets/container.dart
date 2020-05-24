@@ -24,6 +24,9 @@ class ContainerClass extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+//Margin
+
     final margin = EdgeInsets.only(
         left: displayWidth(context) * 0.05,
         right: displayWidth(context) * 0.05,
@@ -32,7 +35,8 @@ class ContainerClass extends StatelessWidget {
     return Container(
         margin: margin,
         child: Stack(children: <Widget>[
-//Info icon
+
+//Information icon
 
           Positioned(
               top: displayHeight(context) * 0.01,
@@ -45,7 +49,7 @@ class ContainerClass extends StatelessWidget {
                 onPressed: () {},
               )),
 
-//Name of the scratchy
+//Name of the card
 
           Positioned(
             top: displayHeight(context) * 0.1,

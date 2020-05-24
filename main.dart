@@ -3,12 +3,7 @@ import 'package:scratchcard/screens/HomePage/HomePage.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatefulWidget {
-  @override
-  MyAppState createState() => MyAppState();
-}
-
-class MyAppState extends State<MyApp> with TickerProviderStateMixin {
+class MyApp extends StatelessWidget {
   final color = Color(0xff2A47BC);
   final int coinsCount = 1500;
 

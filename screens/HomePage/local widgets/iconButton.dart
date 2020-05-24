@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:scratchcard/utils/mediaquery.dart';
 
+
+//Icon on the bottom
 class IconButtonClass extends StatelessWidget {
   final onPressed;
   final icon;
